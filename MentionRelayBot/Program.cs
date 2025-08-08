@@ -23,8 +23,7 @@ var client = new DiscordSocketClient(new DiscordSocketConfig
 });
 client.Log += Logging.Log;
 
-var token = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
-
+var token = Env.GetOrThrow("DISCORD_TOKEN");
 await client.LoginAsync(TokenType.Bot, token);
 await client.StartAsync();
 
