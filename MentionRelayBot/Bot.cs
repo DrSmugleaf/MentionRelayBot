@@ -5,10 +5,10 @@ namespace MentionRelayBot;
 
 public sealed class Bot
 {
-    private DiscordSocketClient _client;
-    private ulong _guildId;
-    private ulong _userId;
-    private ulong _discordDestinationChannel;
+    private readonly DiscordSocketClient _client;
+    private readonly ulong _guildId;
+    private readonly ulong _userId;
+    private readonly ulong _discordDestinationChannel;
 
     public Bot(DiscordSocketClient client)
     {
